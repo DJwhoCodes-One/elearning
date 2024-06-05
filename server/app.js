@@ -5,6 +5,8 @@ const DB = require('./DATABASE/db.js')
 
 const port = process.env.PORT;
 
+app.use(express.json());
+
 app.get('/', (req, res) => {
     res.send("Server Started!!");
 })
