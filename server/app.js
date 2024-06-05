@@ -9,6 +9,12 @@ app.get('/', (req, res) => {
     res.send("Server Started!!");
 })
 
+// importing routes
+const userRoutes = require('./ROUTES/user.js');
+
+// using routes
+app.use('/api', userRoutes);
+
 app.listen(port, () => {
     console.log(`Server started at port: ${port}`);
     DB();
